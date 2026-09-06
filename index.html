@@ -451,6 +451,40 @@
     margin:0 auto;
   }
 
+  /* ---------- contributor ---------- */
+  .contributor{
+    padding:70px 0;
+    border-bottom:1px solid var(--line);
+    text-align:center;
+  }
+  .contributor .kicker{ justify-content:center; margin-bottom:22px; }
+  .contributor-row{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .contributor-card{
+    display:inline-flex;
+    align-items:center;
+    gap:16px;
+    text-decoration:none;
+    color:var(--fg);
+    border:1px solid var(--line);
+    padding:10px 22px 10px 10px;
+    transition:border-color .2s, transform .15s ease;
+  }
+  .contributor-card:hover{ border-color:var(--green); transform:translateY(-1px); }
+  .contributor-card img{
+    width:52px; height:52px;
+    border-radius:50%;
+    display:block;
+    border:1px solid var(--line-strong);
+  }
+  .contributor-info{ display:flex; flex-direction:column; align-items:flex-start; gap:2px; }
+  .contributor-name{ font-family:'Silkscreen', monospace; font-size:14px; }
+  .contributor-handle{ font-size:11.5px; color:var(--fg-dim); }
+
   /* ---------- footer ---------- */
   footer{
     padding:36px 0;
@@ -671,6 +705,29 @@
         <span class="item">22 MB</span>
       </div>
       <p class="disclaimer">Install Android APK. Enable installation from unknown sources if required.</p>
+    </div>
+  </section>
+
+  <!-- CONTRIBUTOR -->
+  <section class="contributor">
+    <div class="wrap">
+      <div class="kicker"><span class="dot"></span>BUILT BY</div>
+      <div class="contributor-row">
+        <a class="contributor-card" href="https://github.com/clonion" target="_blank" rel="noopener">
+          <img src="https://github.com/clonion.png" alt="clonion's GitHub avatar" width="52" height="52" loading="lazy">
+          <span class="contributor-info">
+            <span class="contributor-name">clonion</span>
+            <span class="contributor-handle">github.com/clonion</span>
+          </span>
+        </a>
+        <a class="contributor-card" href="https://github.com/musaibbhat120605" target="_blank" rel="noopener">
+          <img src="https://github.com/musaibbhat120605.png" alt="musaibbhat120605's GitHub avatar" width="52" height="52" loading="lazy">
+          <span class="contributor-info">
+            <span class="contributor-name">musaibbhat120605</span>
+            <span class="contributor-handle">github.com/musaibbhat120605</span>
+          </span>
+        </a>
+      </div>
     </div>
   </section>
 
