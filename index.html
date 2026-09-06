@@ -352,8 +352,11 @@
     gap:56px;
     align-items:center;
   }
-  .showcase-grid.reverse{ direction:rtl; }
-  .showcase-grid.reverse > *{ direction:ltr; }
+  .showcase-grid .sc-copy{ order:1; }
+  .showcase-grid .sc-media{ order:2; }
+  .showcase-grid.reverse{ grid-template-columns: 1.15fr 0.85fr; }
+  .showcase-grid.reverse .sc-media{ order:1; }
+  .showcase-grid.reverse .sc-copy{ order:2; }
 
   .sc-copy .kicker{ margin-bottom:22px; }
   .sc-copy h2{
@@ -469,8 +472,9 @@
     .hero-grid{ grid-template-columns:1fr; }
     .hero-phone-col{ order:-1; padding-top:10px; }
     .hero-copy{ padding-bottom:40px; text-align:left; }
-    .showcase-grid, .showcase-grid.reverse{ grid-template-columns:1fr; direction:ltr; gap:36px; }
-    .sc-media{ order:-1; }
+    .showcase-grid, .showcase-grid.reverse{ grid-template-columns:1fr; gap:36px; }
+    .showcase-grid .sc-media, .showcase-grid.reverse .sc-media{ order:-1; }
+    .showcase-grid .sc-copy, .showcase-grid.reverse .sc-copy{ order:2; }
     .navlinks a:not(.btn-small){ display:none; }
     .footer-row{ flex-direction:column; align-items:flex-start; }
     .footer-note{ text-align:left; }
@@ -655,7 +659,7 @@
     <div class="wrap">
       <div class="kicker"><span class="dot"></span>LAST WAVE / ANDROID</div>
       <h2 class="display">Your music. Your device. Your way.</h2>
-      <a href="#" class="btn primary big">
+      <a href="https://github.com/clonion/LastWave-native/releases/download/3.4.1/LastWave-v3.4.1-release.apk" class="btn primary big">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13"/><path d="M6 11l6 6 6-6"/><path d="M4 21h16"/></svg>
         Download APK
       </a>
@@ -663,7 +667,7 @@
         <span class="item">APK</span>
         <span class="item">Android</span>
         <span class="item">Free</span>
-        <span class="item">v1.0.x</span>
+        <span class="item">v3.4.1</span>
         <span class="item">[APK size]</span>
       </div>
       <p class="disclaimer">Install Android APK. Enable installation from unknown sources if required.</p>
